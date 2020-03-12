@@ -1,35 +1,60 @@
 <html lang="en">
+
 <head>
-	<link rel="stylesheet" href="/assets/css/style.css">
+	<link rel="stylesheet" href="/assets/css/sugar.css">
 </head>
+
 <body>
 	<nav>
-	<ul>
+		<ul>
+			<li>
+				<a href="/">Home</a>
+			</li>
+			<li>
+				<a href="/gallery">Gallery</a>
+			</li>
+			<li>
+				<a href="/profile">Profile</a>
+			</li>
+
+			<!-- 
 		<li>
-			<a href="/">Home</a>
+			<a href="/tentang/14117014">Tentang Aku</a>
 		</li>
-		<li>
-			<a href="/profile">Profile</a>
-		</li>
-		<li>
-			<a href="/gallery">Gallery</a>
-		</li>
-	</ul>
-</nav>
+		 -->
+		</ul>
+	</nav>
 	<section>
 		<h1> Gallery</h1>
 
-    <div class="container">
-        <div><img src="/assets/img/IMG_8883.jpg" alt="" style="width: 100%; height: 100px;">
-        <p>Puncak LDOP</p>
-        </div>
-        <div><img src="/assets/img/itera.png" alt="" style="width: 100%; height: 100px;">
-        <p>Logo ITERA</p>
-        </div>
-        <div><img src="/assets/img/IMG_8890.jpg" alt="" style="width: 100%; height: 100px;">
-        <p>Puncak LDOP</p>
-        </div>
-    </div>
+		<div class="container">
+			<div class="img-container"><img class="responsive" src="/assets/img/kucing.jpg">
+				<p>MEONG</p>
+			</div>
+			<div class="img-container"><img class="responsive" src="/assets/img/senja.jpg">
+				<p>Senja</p>
+			</div>
+			<div class="img-container"><img class="responsive" src="/assets/img/itera.png">
+				<p>Logo ITERA</p>
+			</div>
+			<div class="img-container"><img class="container" src="/assets/img/buku.jpg">
+				<p>Daftar Buku</p>
+			</div>
+		</div>
 	</section>
+	<script>
+		window.onload = autoJalan();
+
+		function autoJalan() {
+			var date = new Date();
+			var jam = parseInt(date.getHours());
+
+			if (jam > 12) {
+				var element = document.body;
+				element.classList.toggle("modemalam");
+			}
+		}
+	</script>
 </body>
+
 </html>
